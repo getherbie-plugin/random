@@ -16,13 +16,13 @@ use Herbie;
 class RandomPlugin extends Herbie\Plugin
 {
 
-    public function onPageLoaded(Herbie\Event $event)
+    public function onPageLoaded($page, $attributes, $DI)
     {
-        $page = $event['page'];
         if (!empty($page->random)) {
+            $menuItemCollection = $DI->get('Menu\Page\Collection');
             $excludeRoutes = empty($page->random['excludes']) ? [] : $page->random['excludes'];
             do {
-                $menuItem = $this->getService('Menu\Page\Collection')->getRandom();
+                $menuItem = $menuItemCollection->getRandom();
                 $invalid = ($menuItem->hidden == true)
                     || ($menuItem->path == $page->path)
                     || in_array($menuItem->route, $excludeRoutes);
