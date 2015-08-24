@@ -1,5 +1,4 @@
-Random Plugin
-=============
+# Random Plugin
 
 `Random` ist ein [Herbie](http://github.com/getherbie/herbie) Plugin, mit dem du auf einer beliebigen Seite 
 zufallsgesteurt den Inhalt einer anderen Seite anzeigst.
