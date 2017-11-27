@@ -1,6 +1,6 @@
 {
     "name": "getherbie/plugin-random",
-    "homepage": "http://www.getherbie.org",
+    "homepage": "https://www.getherbie.org",
     "description": "Random Plugin for Herbie.",
     "keywords": ["herbie", "plugin", "random"],
     "type": "herbie-plugin",
